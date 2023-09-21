@@ -24,7 +24,7 @@ if (USE_OPENGL)
     list(APPEND GLEW_LIB_DIR ${OpenGL_LIBRARY_DIRS})
     list(APPEND GLEW_LIBS ${OPENGL_LIBRARIES})
 
-    if (USE_EGL)
+    if (USE_EGL AND NOT NOT_AUTO_EGL)
         list(APPEND GLEW_LIBS EGL)
     endif()
 
